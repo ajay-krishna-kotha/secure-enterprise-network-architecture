@@ -118,6 +118,19 @@ The architecture was designed to provide:
 - Reduced potential for lateral movement
 - Centralized firewall enforcement
 
+## Key Technical Achievements
+
+- Designed and implemented six isolated enterprise network segments for HR, Finance, IT, Server, Guest, and Management.
+- Configured OPNsense as the central firewall and router with dedicated interfaces and subnets.
+- Implemented least-privilege firewall policies controlling communication between departments.
+- Configured DHCP services for automatic addressing across department networks.
+- Deployed an internal enterprise server providing Apache, MySQL, and Samba services.
+- Configured NAT and port forwarding to publish an internal web service.
+- Configured a WireGuard VPN server, peer, dedicated VPN interface, and supporting firewall rules.
+- Configured Unbound DNS with internal hostname resolution.
+- Validated network segmentation using Kali Linux and Nmap.
+- Troubleshot VMnet/interface mapping, firewall rules, routing, and connectivity issues.
+  
 ## Key Learning Outcomes
 
 Through this project, I developed practical understanding of:
@@ -132,6 +145,30 @@ Through this project, I developed practical understanding of:
 - NAT and network communication
 - Network troubleshooting
 - Security architecture documentation
+
+ ## Security Validation
+
+The network architecture was tested from individual department clients to verify that implemented firewall policies behaved as intended.
+
+Connectivity and access-control testing included:
+
+- `ping` for network reachability testing
+- `netcat` for port-level connectivity testing
+- `curl` for HTTP and internet-access verification
+- `Nmap` for security validation and reconnaissance testing
+
+A Kali Linux system placed within the restricted Guest network was used to test access to protected internal networks.
+
+Nmap testing against the Server segment returned protected service ports as `filtered`, providing evidence that OPNsense was actively dropping unauthorized Guest-to-Server traffic.
+
+## Project Limitations
+
+The following areas were identified for further implementation and validation:
+
+- End-to-end WireGuard connectivity from an external client was not completed.
+- Full traffic-driven Suricata IDS/IPS alert validation was not completed.
+- A dedicated DMZ for the externally published web server is recommended as a future improvement.
+- Centralized logging and longer-term monitoring can be added in a future implementation.
 
 ## Disclaimer
 
