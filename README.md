@@ -176,7 +176,7 @@ The complete technical report documents the network design, implementation,
 security controls, testing methodology, troubleshooting process, limitations,
 and recommended improvements.
 
-📄 [View Technical Project Report](docs/secure-enterprise-network-architecture-report.pdf)
+📄 [View Technical Project Report](secure-enterprise-network-architecture-report.pdf)
 
 ## Disclaimer
 
