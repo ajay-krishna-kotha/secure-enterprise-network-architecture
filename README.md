@@ -44,6 +44,7 @@ The project was implemented using a virtualized network environment.
 
 - OPNsense
 - Nmap
+- Suricata
 - Wireshark
 
 ## Architecture
