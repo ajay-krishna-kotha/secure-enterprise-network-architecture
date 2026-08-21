@@ -170,6 +170,14 @@ The following areas were identified for further implementation and validation:
 - A dedicated DMZ for the externally published web server is recommended as a future improvement.
 - Centralized logging and longer-term monitoring can be added in a future implementation.
 
+## Project Report
+
+The complete technical report documents the network design, implementation,
+security controls, testing methodology, troubleshooting process, limitations,
+and recommended improvements.
+
+📄 [View Technical Project Report](docs/secure-enterprise-network-architecture-report.pdf)
+
 ## Disclaimer
 
 This repository documents a cybersecurity project implemented in a
